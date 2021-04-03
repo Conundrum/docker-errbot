@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "cluster2-3169"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "cluster2-3169"
+  template:
+    metadata:
+      labels:
+        app: "cluster2-3169"
+    spec:
+      containers:
+        - name: "cluster2-3169"
+          image: "k8container2.azurecr.io/cluster2"
+          ports:
+          - containerPort: 3141
