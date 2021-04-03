@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "cluster2-3169"
+    labels:
+        app: "cluster2-3169"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 3141
+      targetPort: 3141
+      protocol: TCP
+      name: http
+    selector:
+        app: "cluster2-3169"
