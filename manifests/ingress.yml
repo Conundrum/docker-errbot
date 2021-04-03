@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "cluster2-3169"
+    labels:
+        app: "cluster2-3169"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: cluster2bbfe-cluster2-3169.cc4336015813477ea3e4.eastus2.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "cluster2-3169"
+                servicePort: 3141
